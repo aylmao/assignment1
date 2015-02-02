@@ -32,6 +32,7 @@ import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MakeExpensesActivity extends Activity {
 
@@ -104,7 +105,26 @@ public class MakeExpensesActivity extends Activity {
 		getMenuInflater().inflate(R.menu.make_expenses, menu);
 		return true;
 	}
-
+	
+	
+	//https://stackoverflow.com/questions/8284706/send-email-via-gmail 02/02/15
+	public void mailIt(View v) {
+		ClaimList cl = new ClaimList();
+		Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL,
+                        new String[] { "" });
+        i.putExtra(Intent.EXTRA_SUBJECT, cl.getLastClaim().getName());
+        i.putExtra(Intent.EXTRA_TEXT, cl.getLastClaim().toString());
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast
+                    .makeText(this,
+                            "There are no email clients installed.",
+                            Toast.LENGTH_SHORT).show();
+        }
+	}
 	public void addAExpense(View v) {
 		
 		//add  expense name 

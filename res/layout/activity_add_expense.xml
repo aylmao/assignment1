@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/ClaimStatusText"
         android:entries="@array/status" />
 
     <Button
@@ -71,5 +71,16 @@
         android:layout_alignParentLeft="true"
         android:text="Claim Status:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/EmailB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/SubmitClaimButton"
+        android:layout_toRightOf="@+id/StatusSpinner"
+        android:onClick="mailIt"
+        android:text="Email" />
 
 </RelativeLayout>
