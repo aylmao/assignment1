@@ -39,6 +39,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/EndDateText"
+        android:calendarViewShown="false"
         android:layout_marginTop="18dp" />
 
     <DatePicker
@@ -48,6 +49,7 @@
         android:layout_above="@+id/EndDateText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:calendarViewShown="false"
         android:layout_alignParentTop="true" />
 
     <EditText

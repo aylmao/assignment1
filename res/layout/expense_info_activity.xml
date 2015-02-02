@@ -65,6 +65,7 @@
         android:layout_above="@+id/DescriptionExpense"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:calendarViewShown="false"
         android:layout_alignParentTop="true" />
 
     <TextView

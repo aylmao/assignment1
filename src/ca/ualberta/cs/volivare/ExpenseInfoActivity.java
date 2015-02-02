@@ -33,6 +33,7 @@ public class ExpenseInfoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.expense_info_activity);
+		/*
 		//http://stackoverflow.com/questions/3913592/start-an-activity-with-a-parameter 02/02/2015
 		Bundle b = getIntent().getExtras();
 		int value = b.getInt("pos");
@@ -56,6 +57,7 @@ public class ExpenseInfoActivity extends Activity {
 			DatePick.updateDate(elist.get(value).year,elist.get(value).month,elist.get(value).day);
 			
 		}
+		*/
 	}
 
 	@Override
@@ -71,6 +73,7 @@ public class ExpenseInfoActivity extends Activity {
 		//last expense in array is the current expense user is adding to claim
 		Expense expense = cl.getLastClaim().getExpenses().getLastExpense();
 		
+		/*
 		Bundle b = getIntent().getExtras();
 		int value = b.getInt("pos");
 		
@@ -79,6 +82,7 @@ public class ExpenseInfoActivity extends Activity {
 			ArrayList<Expense> temp = cl.getLastClaim().getExpenses().getExpenseList();
 			expense = temp.get(value);
 		}
+		*/
 		
 		//set date of expense 
 		DatePicker DatePick = (DatePicker) findViewById(R.id.ExpenseDate);

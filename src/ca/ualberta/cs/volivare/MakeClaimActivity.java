@@ -35,7 +35,7 @@ public class MakeClaimActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_make_claim);
 		
-		
+
 		//http://stackoverflow.com/questions/3913592/start-an-activity-with-a-parameter 02/02/2015
 		Bundle b = getIntent().getExtras();
 		int value = b.getInt("pos");
@@ -44,16 +44,17 @@ public class MakeClaimActivity extends Activity {
 		if (value != -1){ 
 			//issue was I could not figure out a way to load by Data or spinners 
 			//saved the day month year are ints to solve it 
-			ArrayList<Claim> elist = ClaimList.getClaimList();
+			ClaimList cl = new ClaimList();
+			Claim claim = cl.getLastClaim();
 			//set start date of claim
 			DatePicker DatePick = (DatePicker) findViewById(R.id.startDatePick);
-			DatePick.updateDate(elist.get(value).syear,elist.get(value).smonth,elist.get(value).sday);
+			DatePick.updateDate(claim.syear,claim.smonth,claim.sday);
 			//set end date of claim
 			DatePick = (DatePicker) findViewById(R.id.endDatePick);
-			DatePick.updateDate(elist.get(value).eyear,elist.get(value).emonth,elist.get(value).eday);
+			DatePick.updateDate(claim.eyear,claim.emonth,claim.eday);
 			//set description 
 			TextView description = (TextView) findViewById(R.id.DescriptionText);
-			description.setText(elist.get(value).getDescription());
+			description.setText(claim.getDescription());
 		}
 
 	}

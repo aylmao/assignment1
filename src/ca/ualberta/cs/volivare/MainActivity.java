@@ -80,6 +80,9 @@ public class MainActivity extends Activity {
 					claim.setName(name.getText().toString());
 				}
 				
+				ClaimList.getClaimList().add(claim);
+				ClaimList.getClaimList().remove(position);
+				
 				//http://stackoverflow.com/questions/3913592/start-an-activity-with-a-parameter 02/02/2015
 				Bundle place= new Bundle();
 				place.putInt("pos",position);

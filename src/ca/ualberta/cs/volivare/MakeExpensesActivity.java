@@ -69,12 +69,8 @@ public class MakeExpensesActivity extends Activity {
 					//set current item in list selected to name enter
 					elist.get(position).setName(name.getText().toString());
 				}
-				
-				//http://stackoverflow.com/questions/3913592/start-an-activity-with-a-parameter 02/02/2015
-				Bundle place= new Bundle();
-				place.putInt("pos",position);
-				intent.putExtras(place); 
 				startActivity(intent);
+				
 			}
 			
 		} );
