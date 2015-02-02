@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">volivare expense tracker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_make_claim">Make Claim</string>
+    <string name="title_activity_make_expenses">MakeExpensesActivity</string>
+    <string name="title_activity_expense_info">Expense Info Activity</string>
+    <string-array name="Currencies">
+        <item >CAD</item>
+        <item >USD</item>
+        <item >EUR</item>
+        <item >GBP</item>
+    </string-array>
+    
+    <string-array name="categories">
+        <item >air fare</item>
+        <item >ground transport</item>
+        <item >vehicle rental</item>
+        <item >fuel</item>
+        <item >parking</item>
+        <item >registration</item>
+        <item >accommodation</item>
+        <item >meal</item>
+    </string-array>
+    
+    <string-array name="status">
+        <item >in progress</item>
+        <item >submitted</item>
+        <item >returned</item>
+        <item >approved</item>
+    </string-array>
+
+</resources>

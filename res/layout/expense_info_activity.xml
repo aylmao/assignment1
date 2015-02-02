@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ca.ualberta.cs.volivare.ExpenseInfoActivity" >
+
+    <Button
+        android:id="@+id/AddAExpenseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:onClick="addExpense"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/Currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CurrencySpinner"
+        android:layout_alignLeft="@+id/AddAExpenseButton"
+        android:text="Currency:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/CurrencySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/AddAExpenseButton"
+        android:layout_alignLeft="@+id/AddAExpenseButton"
+        android:layout_alignRight="@+id/Currency"
+        android:entries="@array/Currencies" />
+
+    <EditText
+        android:id="@+id/spentInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Currency"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/SpentExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spentInput"
+        android:layout_alignLeft="@+id/spentInput"
+        android:text="Amount Spent:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <DatePicker
+        android:id="@+id/ExpenseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/DescriptionExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/CategoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Currency"
+        android:layout_alignRight="@+id/spentInput"
+        android:text="Category:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/CategorySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/AddAExpenseButton"
+        android:layout_alignLeft="@+id/CategoryText"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/CurrencySpinner"
+        android:entries="@array/categories" />
+
+    <EditText
+        android:id="@+id/expenseDescrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/SpentExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/DescriptionExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/expenseDescrip"
+        android:layout_alignLeft="@+id/expenseDescrip"
+        android:text="Description:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+</RelativeLayout>

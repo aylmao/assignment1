@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/ExpensesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Expenses"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/AddedExpensesListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/AddExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ExpensesTitle" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/ExpenseNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/AddExpense"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/AddExpense"
+        android:layout_toLeftOf="@+id/AddExpense"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/AddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/SubmitClaimButton"
+        android:layout_alignParentRight="true"
+        android:onClick="addAExpense"
+        android:text="Add" />
+
+    <Spinner
+        android:id="@+id/StatusSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:entries="@array/status" />
+
+    <Button
+        android:id="@+id/SubmitClaimButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ClaimStatusText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:onClick="submitClaim"
+        android:text="Submit Claim" />
+
+    <TextView
+        android:id="@+id/ClaimStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/StatusSpinner"
+        android:layout_alignParentLeft="true"
+        android:text="Claim Status:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
